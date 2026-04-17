@@ -1,0 +1,46 @@
+1971  ping 
+ 1972  find address
+ 1973  top
+ 1974  htop
+ 1975  sudo apt update
+ 1976  sudo apt upgrade
+ 1977  sudo apt clean
+ 1978  df -h .
+ 1979  sudo apt autoremove
+ 1980  mtr
+ 1981  dig
+ 1982  idadd
+ 1983  ipadd
+ 1984  ip add
+ 1985  ip addr
+ 1986  ip route
+ 1987  free -m
+ 1988  pwd
+ 1989  ls
+ 1990  sl
+ 1991  cd ..
+ 1992  pwd
+ 1993  touch 10.txt
+ 1994  sudo touch 10.txt
+ 1995  cat 10.txt
+ 1996  nano
+ 1997  if up; ifup; ifdown; ipadd; htop
+ 1998  htop
+ 1999  neofetch
+ 2000  uptime
+ 2001  free -h
+ 2002  uname -a
+ 2003  ncdu
+ 2004  whoami
+ 2005  id
+ 2006  cd ai_nexus_classes/PYSPARKK/working
+ 2007  ls
+ 2008  stat build.zig
+ 2009  stat pyspark_cli_example.py
+ 2010  cat pyspark_cli_example.py
+ 2011  history
+ 2011  history
+ 2012  cd ..
+ 2013  du -sh PYSPARKK
+ 2014  du -sh PYSPARKK/2024-12-24\ -\ DBFS\ Example.py
+ 2015  find . name "pyspark"

@@ -1,0 +1,53 @@
+# --- VIRTUAL ENVIRONMENTS (Matches at any depth) ---
+**/venv/
+**/.venv/
+**/env/
+**/.env/
+**/ENV/
+**/env.bak/
+**/venv.bak/
+
+# --- PYTHON CACHE & COMPILED ---
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+
+# --- SENSITIVE DATA ---
+**/.env
+**/.flaskenv
+**/instance/
+
+# --- PACKAGING & DISTRIBUTION ---
+**/dist/
+**/build/
+**/*.egg-info/
+**/*.egg
+**/*.spec
+**/bin/
+**/lib/
+**/lib64/
+
+# --- DATA & DATABASE ---
+**/*.sqlite3
+**/nosetests.xml
+**/coverage.xml
+**/.coverage
+**/.hypothesis/
+
+# --- JUPYTER & NOTEBOOKS ---
+**/.ipynb_checkpoints
+
+# --- OS & IDE (Extra safety) ---
+**/.DS_Store
+**/Thumbs.db
+**/.vscode/
+**/.idea/
+# Large datasets (optional)
+data/*
+!data/.gitkeep
+
+# Logs
+*.log
