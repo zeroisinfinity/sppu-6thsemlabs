@@ -1,0 +1,16 @@
+<!-- root element -->
+<!ELEMENT employees (employee+)>
+
+<!-- employee structure -->
+<!ELEMENT employee (name, department, designation, salary, email, phone)>
+
+<!-- attribute for employee -->
+<!ATTLIST employee empID CDATA #REQUIRED>
+
+<!-- individual fields -->
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT department (#PCDATA)>
+<!ELEMENT designation (#PCDATA)>
+<!ELEMENT salary (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT phone (#PCDATA)>

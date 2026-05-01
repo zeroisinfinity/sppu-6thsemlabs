@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <style>
+        /* page background */
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #74ebd5, #ACB6E5);
+        }
+
+        /* form box */
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 50px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        /* inputs */
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 6px 0;
+        }
+
+        .gender {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+
+            // get values
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let zip = document.getElementById("zip").value;
+            let password = document.getElementById("password").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+
+            // check empty fields
+            if (name === "" || email === "" || phone === "" || zip === "" || password === "") {
+                alert("All fields are required!");
+                return false;
+            }
+
+            // email check
+            if (!email.includes("@")) {
+                alert("Invalid email!");
+                return false;
+            }
+
+            // phone check
+            if (phone.length !== 10 || isNaN(phone)) {
+                alert("Enter valid 10 digit phone number!");
+                return false;
+            }
+
+            // gender check
+            if (!gender) {
+                alert("Select gender!");
+                return false;
+            }
+
+            // zip check
+            if (zip.length !== 6 || isNaN(zip)) {
+                alert("Enter valid ZIP!");
+                return false;
+            }
+
+            // password check
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters!");
+                return false;
+            }
+
+            // confirmation
+            let confirmSubmit = prompt("Type CONFIRM to submit:");
+
+            if (confirmSubmit === "CONFIRM") {
+                alert("Registration Successful!");
+                return true;
+            } else {
+                alert("Registration Cancelled!");
+                return false;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Registration Form</h2>
+
+    <!-- form -->
+    <form onsubmit="return validateForm()">
+
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male" class="gender"> Male
+        <input type="radio" name="gender" value="female" class="gender"> Female
+
+        <br><br>
+
+        <input type="text" id="zip" placeholder="ZIP Code">
+        <textarea placeholder="Address"></textarea>
+
+        <input type="password" id="password" placeholder="Password">
+
+        <button type="submit">Register</button>
+
+    </form>
+</div>
+
+</body>
+</html>

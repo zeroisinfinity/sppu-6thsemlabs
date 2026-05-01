@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- link CSS file to style XML -->
+<?xml-stylesheet type="text/css" href="employees.css"?>
+
+<!-- connect DTD file -->
+<!DOCTYPE employees SYSTEM "employees.dtd">
+
+<employees>
+
+    <!-- employee 1 details -->
+    <employee empID="E101">
+        <name>Rahul Sharma</name>
+        <department>IT</department>
+        <designation>Software Engineer</designation>
+        <salary>60000</salary>
+        <email>rahul@company.com</email>
+        <phone>9876543210</phone>
+    </employee>
+
+    <!-- employee 2 -->
+    <employee empID="E102">
+        <name>Anita Desai</name>
+        <department>HR</department>
+        <designation>HR Manager</designation>
+        <salary>75000</salary>
+        <email>anita@company.com</email>
+        <phone>9123456780</phone>
+    </employee>
+
+    <!-- employee 3 -->
+    <employee empID="E103">
+        <name>Vikram Patel</name>
+        <department>Finance</department>
+        <designation>Accountant</designation>
+        <salary>55000</salary>
+        <email>vikram@company.com</email>
+        <phone>9988776655</phone>
+    </employee>
+
+</employees>

@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+
+.logo {
+    height: 50px;
+}
+
+/* hero section */
+.hero {
+    padding: 100px 20px;
+    background: #222;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin: 10px 0;
+}
+
+/* about */
+.about {
+    padding: 60px 20px;
+}
+
+/* menu */
+.menu {
+    padding: 60px 20px;
+}
+
+.menu-item {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* reservation */
+.reservation {
+    padding: 60px 20px;
+    background: #222;
+}
+
+.reservation input {
+    padding: 10px;
+    margin: 5px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+}
