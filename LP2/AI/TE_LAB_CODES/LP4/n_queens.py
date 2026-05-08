@@ -1,0 +1,143 @@
+# ============================================================
+# QUESTION:
+# Implement solution for Constraint Satisfaction Problem
+# using Backtracking for N-Queens problem.
+# ============================================================
+
+
+# ============================================================
+# EXPLANATION:
+#
+# N-Queens Problem:
+#
+# Place N queens on N×N board so that
+# no queen attacks another.
+#
+# Constraints:
+#
+# - Same row ❌
+# - Same column ❌
+# - Same diagonal ❌
+#
+# Backtracking:
+#
+# Try placing queen.
+# If conflict → backtrack.
+# Continue until solution found.
+# ============================================================
+
+
+# ============================================================
+# EXPLANATION WITH EXAMPLE:
+#
+# N = 4
+#
+# Solution:
+#
+# 0 0 1 0
+# 1 0 0 0
+# 0 0 0 1
+# 0 1 0 0
+#
+# Each row has one queen
+# No diagonal conflicts.
+# ============================================================
+
+
+# ======================
+# N-QUEENS PROGRAM
+# ======================
+
+N = 4
+
+
+def printSolution(board):
+
+    for i in range(N):
+
+        for j in range(N):
+
+            print(board[i][j], end=" ")
+
+        print()
+
+
+def isSafe(board, row, col):
+
+    for i in range(col):
+
+        if board[row][i] == 1:
+
+            return False
+
+
+    for i, j in zip(range(row, -1, -1),
+
+                    range(col, -1, -1)):
+
+        if board[i][j] == 1:
+
+            return False
+
+
+    for i, j in zip(range(row, N, 1),
+
+                    range(col, -1, -1)):
+
+        if board[i][j] == 1:
+
+            return False
+
+
+    return True
+
+
+def solveNQUtil(board, col):
+
+    if col >= N:
+
+        return True
+
+
+    for i in range(N):
+
+        if isSafe(board, i, col):
+
+            board[i][col] = 1
+
+
+            if solveNQUtil(board, col + 1):
+
+                return True
+
+
+            board[i][col] = 0
+
+
+    return False
+
+
+def solveNQ():
+
+    board = [[0, 0, 0, 0],
+
+             [0, 0, 0, 0],
+
+             [0, 0, 0, 0],
+
+             [0, 0, 0, 0]]
+
+
+    if not solveNQUtil(board, 0):
+
+        print("Solution does not exist")
+
+        return False
+
+
+    printSolution(board)
+
+    return True
+
+
+solveNQ()

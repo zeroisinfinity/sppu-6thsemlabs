@@ -6,6 +6,7 @@
 **/ENV/
 **/env.bak/
 **/venv.bak/
+**/DSBDAL/LAB-PRAC/python-prac/asgn-1/jupyter_env
 
 # --- PYTHON CACHE & COMPILED ---
 **/__pycache__/
