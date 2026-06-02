@@ -4,7 +4,7 @@ class Disjoints:
 
     def find(self,node):
         if self.parent[node] != node:
-            node = self.find(self.parent[node])
+             self.parent[node] = self.find(self.parent[node])
         return self.parent[node]
     
     def union(self,u,v):
@@ -12,7 +12,7 @@ class Disjoints:
         root_v = self.find(v)
 
         if root_u != root_v:
-            self.parent[v] = root_u
+            self.parent[root_v] = root_u
             return True
         return False
 
