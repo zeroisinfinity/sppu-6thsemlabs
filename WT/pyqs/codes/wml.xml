@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<wml>
+    <card id="card1" title="Welcome">
+        <p> Hello WML world!</p>
+    </card>
+</wml>
